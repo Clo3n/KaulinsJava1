@@ -1,11 +1,21 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class Kods {
     public static void main(String[] args) {
-        int skaitlis;
+        Scanner dati = new Scanner(System.in);
+        int skaitlis, reizes;
         Random rand = new Random();
-        skaitlis = rand.nextInt(6) + 1;
-        System.out.println("Uzkrita skaitlis: " + skaitlis);
+
+        System.out.print("Cik reizes mest kauliņu? ");
+        reizes = dati.nextInt();
+
+        for(int i=0;i<reizes;i++) {
+            skaitlis = rand.nextInt(6) + 1;
+            System.out.println("Uzkrita skaitlis: " + skaitlis);
+        }
+        
+        dati.close();
     }
 
 }
