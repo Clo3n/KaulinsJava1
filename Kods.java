@@ -2,20 +2,23 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Kods {
-    public static void main(String[] args) {
-        Scanner dati = new Scanner(System.in);
-        int skaitlis, reizes;
+
+    static void mestKaulinu(int reizes) {
+        int skaitlis;
         Random rand = new Random();
-
-        System.out.print("Cik reizes mest kauliņu? ");
-        reizes = dati.nextInt();
-
-        for(int i=0;i<reizes;i++) {
+        for(int i=0;i<reizes;i++){
             skaitlis = rand.nextInt(6) + 1;
             System.out.println("Uzkrita skaitlis: " + skaitlis);
         }
-        
-        dati.close();
     }
+    public static void main(String[] args) {
+        Scanner dati = new Scanner(System.in);
 
+        System.out.print("Cik reizes mest kauliņu? ");
+        int reizes = dati.nextInt();
+
+        mestKaulinu(reizes);
+        
+        dati.close();   
+    }
 }
